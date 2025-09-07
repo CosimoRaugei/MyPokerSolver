@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poker-equity-backend"
+version = "0.1.0"
+description = "Range vs Range equity FastAPI backend"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.110",
+  "uvicorn[standard]>=0.23",
+  "pydantic>=2.4",
+  "numpy>=1.26",
+]
+
+[project.optional-dependencies]
+eval = ["eval7>=0.1.10"]
+test = ["pytest>=7.4", "httpx>=0.26", "pytest-cov>=4.1"]
